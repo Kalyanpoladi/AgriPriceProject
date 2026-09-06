@@ -16,14 +16,19 @@ def clean():
     df = df.dropna().drop_duplicates()
 
     print("3. Renaming columns...")
-    df = df.rename(columns={
-        "Arrival Quantity 03-02-2023 03-09-2026": "Arrival_Quantity",
-        "Modal Price 03-02-2023 to 03-09-2026": "Modal_Price",
+    rename_map = {
         "State/UT": "State_UT",
         "Commodity Group": "Commodity_Group",
         "Arrival Unit": "Arrival_Unit",
-        "Price Unit": "Price_Unit"
-    })
+        "Price Unit": "Price_Unit",
+    }
+    df = df.rename(columns=rename_map)
+    for col in df.columns:
+        if "Arrival Quantity" in col:
+            df = df.rename(columns={col: "Arrival_Quantity"})
+        if "Modal Price" in col:
+            df = df.rename(columns={col: "Modal_Price"})
+
 
     print("4. Standardizing commodity names...")
     df["Commodity"] = df["Commodity"].replace({

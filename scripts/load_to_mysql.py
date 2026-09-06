@@ -15,14 +15,6 @@ def load():
     print("2. Preparing date column...")
     df["Month_dt"] = pd.to_datetime(df["Month_dt"]).dt.date
 
-    print("2.5. Aligning column names with MySQL table...")
-    df = df.rename(columns={
-        "State/UT": "State_UT",
-        "Commodity Group": "Commodity_Group",
-        "Arrival Unit": "Arrival_Unit",
-        "Price Unit": "Price_Unit",
-    })
-
     print("3. Connecting to MySQL...")
     engine = create_engine("mysql+mysqlconnector://root:NewPass123!@localhost:3306/agriprice")
 
