@@ -1,4 +1,4 @@
-State/UT,Commodity Group,Commodity,Month,Arrival_Quantity,Arrival Unit,Modal_Price,Price Unit,Month_dt,Month_num,Year
+State_UT,Commodity_Group,Commodity,Month,Arrival Quantity 03-02-2023 to 03-09-2026,Arrival_Unit,Modal_Price,Price_Unit,Month_dt,Month_num,Year
 Telangana,Vegetables,Alsandikai,February-2023,0.3,Metric Tonnes,2500.0,Rs./Quintal,2023-02-01,2,2023
 Telangana,Vegetables,Banana - Green,February-2023,2152.6,Metric Tonnes,2012.93,Rs./Quintal,2023-02-01,2,2023
 Telangana,Vegetables,Beetroot,February-2023,2107.4,Metric Tonnes,1075.81,Rs./Quintal,2023-02-01,2,2023
